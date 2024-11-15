@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace P04Zawodnicy.Shared.Services
 {
-    public class ManagerZawodnikowLocal
+    public class ManagerZawodnikowLocal : IManagerZawodnikow
     {
 
         //private Zawodnik[] zawodnicyCache;
@@ -114,7 +114,7 @@ namespace P04Zawodnicy.Shared.Services
 
         // Zaczynamy od zrobienia metody zapisz 
         // ta metoda powinna zapisywać do pliku stan aktualny naszych zawodnikow 
-        public void Zapisz()
+        private void Zapisz()
         {
             const string naglowek = "id_zawodnika;id_trenera;imie;nazwisko;kraj;data urodzenia;wzrost;waga";
             const string szablon = "{0};{1};{2};{3};{4};{5};{6};{7}";
@@ -144,6 +144,7 @@ namespace P04Zawodnicy.Shared.Services
                 }
             }
             zawodnicyCache.Remove(zawodnikDoUsuniecia);
+            Zapisz();
         }
 
         public void Dodaj(Zawodnik zawodnik)
@@ -155,6 +156,23 @@ namespace P04Zawodnicy.Shared.Services
 
             zawodnik.Id_zawodnika = maksId + 1;
             zawodnicyCache.Add(zawodnik);
+
+            Zapisz();
+        }
+
+        public void Edytuj(Zawodnik edytowany)
+        {
+            Zapisz();
+        }
+
+        public int PodajSredniWiekZawodnikow(string kraj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Trener[] PodajTrenerow()
+        {
+            throw new NotImplementedException();
         }
     }
 }

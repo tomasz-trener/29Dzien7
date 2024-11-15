@@ -16,12 +16,12 @@ namespace P03AplikacjaBazodanowaZawodnicy
 {
     public partial class FrmStartowy : Form
     {
-        ManagerZawodnikow mz = new ManagerZawodnikow();
+        IManagerZawodnikow mz;
         
-        public FrmStartowy()
+        public FrmStartowy(IManagerZawodnikow mz)
         {
             InitializeComponent();
-
+            this.mz = mz;
             mz.WczytajZawodnikow();
             cbKraje.DataSource = mz.PodajKraje();
 

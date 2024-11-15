@@ -23,12 +23,12 @@ namespace P03AplikacjaBazodanowaZawodnicy
     public partial class FrmSzczegoly : Form
     {
         Zawodnik wyswietlanyZawodnik;
-        ManagerZawodnikow mz;
+        IManagerZawodnikow mz;
         FrmStartowy frmStartowy;
         TrybOkienka trybOkienka;
 
         // tworzymy nowego zawodnika
-        public FrmSzczegoly(ManagerZawodnikow mz,FrmStartowy frmStartowy)
+        public FrmSzczegoly(IManagerZawodnikow mz,FrmStartowy frmStartowy)
         {
             InitializeComponent();
 
@@ -47,7 +47,7 @@ namespace P03AplikacjaBazodanowaZawodnicy
           
 
         }
-        public FrmSzczegoly(Zawodnik zawodnik, ManagerZawodnikow mz, FrmStartowy frmStartowy, TrybOkienka trybOkienka ) : this(mz, frmStartowy)
+        public FrmSzczegoly(Zawodnik zawodnik, IManagerZawodnikow mz, FrmStartowy frmStartowy, TrybOkienka trybOkienka ) : this(mz, frmStartowy)
         {
           //  InitializeComponent();
 

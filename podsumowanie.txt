@@ -1,0 +1,4 @@
+1) wprowadzenie do dziedzizenia
+2) wprowadzenie do intrefejsów 
+3) skopiowanie projektu koncowego wraz z bibliotekami do nazsej solucji 
+3) zadanie na zastosowanie dziedzicenia (zadanie1.txt)

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace P04Zawodnicy.Shared.Services
 {
     // ten bedzie dzialac na bazie danych 
-    public class ManagerZawodnikow
+    public class ManagerZawodnikow : IManagerZawodnikow
     {
         PolaczenieZBaza pzb = new PolaczenieZBaza();
         public List<Zawodnik> WczytajZawodnikow()
