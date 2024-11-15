@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,10 @@ namespace P03AplikacjaBazodanowaZawodnicy
             InitializeComponent();
             this.mz = mz;
             mz.WczytajZawodnikow();
-            cbKraje.DataSource = mz.PodajKraje();
+            var kraje = mz.PodajKraje();
+            cbKraje.DataSource = kraje;
+
+            generujObrazkiKrajow(kraje);
 
             foreach (var k in Zawodnik.DostepneKolumny)
                 cbKolumny.Items.Add(k);
@@ -32,9 +36,54 @@ namespace P03AplikacjaBazodanowaZawodnicy
         public void Odswiez()
         {
             mz.WczytajZawodnikow();
-            cbKraje.DataSource = mz.PodajKraje();
+            var kraje = mz.PodajKraje();
+            cbKraje.DataSource = kraje;
+
+            generujObrazkiKrajow(kraje);
         }
-      
+
+        private void generujObrazkiKrajow(string[] kraje)
+        {
+            Dictionary<string, string> skroty = new Dictionary<string, string>()
+            {
+                {"POL","pl" },
+                {"GER","de" },
+                {"AUT","at" },
+                {"FIN","fi" },
+                {"USA","us" },
+                {"NOR","no" }
+            };
+
+            string folderFlagi = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "flagi");
+            for (int i = 0; i < kraje.Length; i++)
+            {
+                string sciezka = Path.Combine(folderFlagi, skroty[kraje[i]]+ ".png");
+                if (File.Exists(sciezka))
+                {
+                    PictureBox pc = new PictureBox()
+                    {
+                        Name= "pb"+ kraje[i],
+                        Size = new Size(50,30),
+                        Location = new Point(10 + i*60,10),
+                        ImageLocation = sciezka,
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+                        Cursor = Cursors.Hand,
+                        Tag = kraje[i]
+                    };
+                    pc.Click += flaga_Click;
+                    pnlFlagi.Controls.Add(pc);
+                }
+            }
+
+        }
+
+        private void flaga_Click(object sender, EventArgs e)
+        {
+            // musimy odczytac ktora dlaga zostala kliknieta 
+            Control kliknietyObarzek = (Control)sender;
+            string kodKraju = (string)kliknietyObarzek.Tag;
+            cbKraje.SelectedItem = kodKraju;
+        }
 
         private void btnTemperatuara_Click(object sender, EventArgs e)
         {
@@ -136,6 +185,12 @@ namespace P03AplikacjaBazodanowaZawodnicy
             string wybranyKraj = cbKraje.SelectedItem.ToString();
             int sredniWiek = mz.PodajSredniWiekZawodnikow(wybranyKraj);
             MessageBox.Show($"Sredni wiek zawodnikow z kraju {wybranyKraj} wynosi {sredniWiek}");
+        }
+
+        private void btnWyszukiwarka_Click(object sender, EventArgs e)
+        {
+            FrmWyszuiwarka frmWyszuiwarka = new FrmWyszuiwarka(mz);
+            frmWyszuiwarka.ShowDialog();
         }
     }
 }

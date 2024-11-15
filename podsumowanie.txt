@@ -6,3 +6,6 @@
 6) dodalismy customowa kontrolke datetimePicker 
   (uwaga - trzeba bylo zmienic w zawodniku datetime na nullable i tym samym poprawic managerZawodnikow sql zeby przyjmowa³ wartosci puste)
 7) nauczylismy sie dynamicznego generowania kontrolek 
+ a) stowrzenie pobieracza flag 
+ b) uzlismy tych obrazkow do zadania w ktorym nalezy wyswietlic flagi jako picture boxy do filtrowaniakrajow 
+ 8) Stworzenie wyszukiwarki osob 

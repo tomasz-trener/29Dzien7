@@ -67,5 +67,10 @@ namespace P04Zawodnicy.Shared.Services
                 },
             };
         }
+
+        public List<Osoba> WyszukajOsoby(string text)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

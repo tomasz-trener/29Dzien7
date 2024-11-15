@@ -10,6 +10,6 @@ namespace P04Zawodnicy.Shared.Domains
     {
         public int Id { get; set; }
   
-        public string PelnaNazwa => $"{Imie} {Nazwisko}";
+        //public string PelnaNazwa => $"{Imie} {Nazwisko}";
     }
 }

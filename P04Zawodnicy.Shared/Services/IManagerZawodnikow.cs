@@ -24,5 +24,6 @@ namespace P04Zawodnicy.Shared.Services
         int PodajSredniWiekZawodnikow(string kraj);
 
         Trener[] PodajTrenerow();
+        List<Osoba> WyszukajOsoby(string text);
     }
 }

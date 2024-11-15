@@ -40,6 +40,8 @@
             this.wbPrzegladrka = new System.Windows.Forms.WebBrowser();
             this.cbKolumny = new System.Windows.Forms.CheckedListBox();
             this.btnPokazSredniWeik = new System.Windows.Forms.Button();
+            this.pnlFlagi = new System.Windows.Forms.Panel();
+            this.btnWyszukiwarka = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbDane
@@ -139,9 +141,9 @@
             // 
             this.cbKolumny.CheckOnClick = true;
             this.cbKolumny.FormattingEnabled = true;
-            this.cbKolumny.Location = new System.Drawing.Point(183, 187);
+            this.cbKolumny.Location = new System.Drawing.Point(183, 217);
             this.cbKolumny.Name = "cbKolumny";
-            this.cbKolumny.Size = new System.Drawing.Size(100, 124);
+            this.cbKolumny.Size = new System.Drawing.Size(100, 94);
             this.cbKolumny.TabIndex = 11;
             this.cbKolumny.SelectedIndexChanged += new System.EventHandler(this.cbKolumny_SelectedIndexChanged);
             // 
@@ -155,11 +157,30 @@
             this.btnPokazSredniWeik.UseVisualStyleBackColor = true;
             this.btnPokazSredniWeik.Click += new System.EventHandler(this.btnPokazSredniWeik_Click);
             // 
+            // pnlFlagi
+            // 
+            this.pnlFlagi.Location = new System.Drawing.Point(12, 317);
+            this.pnlFlagi.Name = "pnlFlagi";
+            this.pnlFlagi.Size = new System.Drawing.Size(491, 113);
+            this.pnlFlagi.TabIndex = 13;
+            // 
+            // btnWyszukiwarka
+            // 
+            this.btnWyszukiwarka.Location = new System.Drawing.Point(184, 188);
+            this.btnWyszukiwarka.Name = "btnWyszukiwarka";
+            this.btnWyszukiwarka.Size = new System.Drawing.Size(101, 23);
+            this.btnWyszukiwarka.TabIndex = 14;
+            this.btnWyszukiwarka.Text = "Wyszukiwarka";
+            this.btnWyszukiwarka.UseVisualStyleBackColor = true;
+            this.btnWyszukiwarka.Click += new System.EventHandler(this.btnWyszukiwarka_Click);
+            // 
             // FrmStartowy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 326);
+            this.ClientSize = new System.Drawing.Size(517, 452);
+            this.Controls.Add(this.btnWyszukiwarka);
+            this.Controls.Add(this.pnlFlagi);
             this.Controls.Add(this.btnPokazSredniWeik);
             this.Controls.Add(this.cbKolumny);
             this.Controls.Add(this.wbPrzegladrka);
@@ -193,6 +214,8 @@
         private System.Windows.Forms.WebBrowser wbPrzegladrka;
         private System.Windows.Forms.CheckedListBox cbKolumny;
         private System.Windows.Forms.Button btnPokazSredniWeik;
+        private System.Windows.Forms.Panel pnlFlagi;
+        private System.Windows.Forms.Button btnWyszukiwarka;
     }
 }
 

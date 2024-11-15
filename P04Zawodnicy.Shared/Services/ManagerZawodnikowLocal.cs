@@ -177,5 +177,10 @@ namespace P04Zawodnicy.Shared.Services
         {
             throw new NotImplementedException();
         }
+
+        public List<Osoba> WyszukajOsoby(string text)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

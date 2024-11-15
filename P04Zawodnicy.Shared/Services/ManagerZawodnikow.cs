@@ -170,6 +170,22 @@ namespace P04Zawodnicy.Shared.Services
             }
             return trenerzy;
         }
+
+        public List<Osoba> WyszukajOsoby(string text)
+        {
+           List<Osoba> osoby = new List<Osoba>();
+           osoby.AddRange(WczytajZawodnikow());
+           osoby.AddRange(PodajTrenerow());
+
+            text = text.ToLower();
+            List<Osoba> wyniki = new List<Osoba>();
+            foreach (var o in osoby)
+            {
+                if(o.PelnaNazwa.ToLower().Contains(text))
+                    wyniki.Add(o); 
+            }
+             return wyniki;
+        }
     }
 
 

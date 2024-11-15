@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,23 +27,25 @@ namespace P04Zawodnicy.Shared.Domains
         //        return Imie + " " + Nazwisko;
         //    }
         //}
-        public string ImieNazwisko
-        {
-            get
-            {
-                string imieNazwisko = Imie;
-                if (Nazwisko.Length == 1)
-                {
-                    imieNazwisko += " " + Nazwisko[0];
-                }
-                else if (Nazwisko.Length > 1)
-                {
-                    imieNazwisko += " " + Nazwisko[0] + Nazwisko.Substring(1).ToLower();
-                }
-                return imieNazwisko;
+        //public string ImieNazwisko
+        //{
+        //    get
+        //    {
+        //        string imieNazwisko = Imie;
+        //        if (Nazwisko.Length == 1)
+        //        {
+        //            imieNazwisko += " " + Nazwisko[0];
+        //        }
+        //        else if (Nazwisko.Length > 1)
+        //        {
+        //            imieNazwisko += " " + Nazwisko[0] + Nazwisko.Substring(1).ToLower();
+        //        }
+        //        return imieNazwisko;
 
-            }
-        }
+        //    }
+        //}
+
+        public string ImieNazwisko => PelnaNazwa;
 
         public string this[string nazwaWlasciwosci]
         {
