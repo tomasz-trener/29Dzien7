@@ -19,6 +19,8 @@ namespace P02ZadanieDziedziczenie
             Zawartosc = $"SELECT {Zawartosc} from Dane";
             //File.WriteAllText(Sciezka + "\\" + Nazwa + rozszerzenie, Zawartosc);
             base.Zapisz();
+            // this - odwolanie do samego siebie 
+            // base - odowalnie do klasy po ktorej dziedziczę 
         }
     }
 }

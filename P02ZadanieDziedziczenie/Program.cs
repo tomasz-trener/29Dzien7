@@ -40,6 +40,15 @@ namespace P02ZadanieDziedziczenie
             // new - użyj metody z klasy B 
             // virtual - pozwalam na override 
 
+            object o = new object();
+            
+            PlikSQL plikSQL = new PlikSQL();
+
+            object o1 = new PlikSQL();
+            object o2 = new PlikHTML();
+            object o3 = new PlikCSV();
+
+
         }
     }
 }
