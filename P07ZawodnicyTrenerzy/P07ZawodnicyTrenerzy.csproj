@@ -116,6 +116,12 @@
     <Compile Include="CustomDateTimePicker.Designer.cs">
       <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomNumeric.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomNumeric.Designer.cs">
+      <DependentUpon>CustomNumeric.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStartowy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <Compile Include="Services\PdfManager.cs" />
     <EmbeddedResource Include="CustomDateTimePicker.resx">
       <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomNumeric.resx">
+      <DependentUpon>CustomNumeric.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStartowy.resx">
       <DependentUpon>FrmStartowy.cs</DependentUpon>

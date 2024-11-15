@@ -1,5 +1,8 @@
 1) wprowadzenie do dziedzizenia
 2) wprowadzenie do intrefejsów 
 3) skopiowanie projektu koncowego wraz z bibliotekami do nazsej solucji 
-4) zadanie na zastosowanie dziedzicenia (zadanie1.txt)
+4) zadanie na zastosowanie dziedziczenia (zadanie1.txt)
 5) wdro¿yliœmy intrefejsy do managerZawodnikow
+6) dodalismy customowa kontrolke datetimePicker 
+  (uwaga - trzeba bylo zmienic w zawodniku datetime na nullable i tym samym poprawic managerZawodnikow sql zeby przyjmowa³ wartosci puste)
+7) nauczylismy sie dynamicznego generowania kontrolek 
