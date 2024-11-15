@@ -8,4 +8,4 @@
 7) nauczylismy sie dynamicznego generowania kontrolek 
  a) stowrzenie pobieracza flag 
  b) uzlismy tych obrazkow do zadania w ktorym nalezy wyswietlic flagi jako picture boxy do filtrowaniakrajow 
- 8) Stworzenie wyszukiwarki osob 
+8) Stworzenie wyszukiwarki osob 

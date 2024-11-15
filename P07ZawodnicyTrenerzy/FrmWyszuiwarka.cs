@@ -35,17 +35,25 @@ namespace P08ZadanieFiltorwanieDanych
             int yOffest = 0;
             foreach (Osoba osoba in wynik)
             {
+                Label lblTyp = new Label()
+                {
+                    Text = $"Kto: {osoba.GetType().Name}",
+                    Location = new Point(10, yOffest),
+                    Width = 200
+                };
+                pnlOsoby.Controls.Add(lblTyp);
+
                 Label lblImie = new Label()
                 {
                     Text = $"Imie: {osoba.Imie}",
-                    Location = new Point(10, yOffest)
+                    Location = new Point(10, yOffest+20)
                 };
                 pnlOsoby.Controls.Add(lblImie);
 
                 Label lblNazwisko = new Label()
                 {
                     Text = $"Nazwisko: {osoba.Nazwisko}",
-                    Location = new Point(10, yOffest + 30),
+                    Location = new Point(10, yOffest + 40),
                     Width = 200
                 };
                 pnlOsoby.Controls.Add(lblNazwisko);
