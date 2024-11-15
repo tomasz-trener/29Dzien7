@@ -123,9 +123,12 @@ namespace P04Zawodnicy.Shared.Services
             StringBuilder sb = new StringBuilder(naglowek + Environment.NewLine);
             foreach (var z in zawodnicyCache)
             {
+                string dataUr = z.DataUrodzenia == null ? "null" : "'" + z.DataUrodzenia.Value.ToString("yyyyMMdd") + "'";
+
+
                 string wiersz = string.Format(szablon,
                     z.Id_zawodnika, z.Id_trenera, z.Imie, z.Nazwisko,
-                    z.Kraj, z.DataUrodzenia.ToString("yyyy-MM-dd"),
+                    z.Kraj, dataUr,
                     z.Wzrost, z.Waga);
                 sb.AppendLine(wiersz);
             }

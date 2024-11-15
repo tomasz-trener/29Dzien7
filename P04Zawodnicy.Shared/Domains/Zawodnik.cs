@@ -66,7 +66,7 @@ namespace P04Zawodnicy.Shared.Domains
             }
         }
 
-        public DateTime DataUrodzenia { get; set; }
+        public DateTime? DataUrodzenia { get; set; }
         public int CompareTo(Zawodnik inna)
         {
             int pora1 = PoraRoku(this.DataUrodzenia);
@@ -75,11 +75,14 @@ namespace P04Zawodnicy.Shared.Domains
         }
 
 
-        private int PoraRoku(DateTime data)
+        private int PoraRoku(DateTime? data)
         {
-            if (data.Month >= 3 && data.Month <= 5) return 1; // wiosna
-            if (data.Month >= 6 && data.Month <= 8) return 2; // Lato
-            if (data.Month >= 9 && data.Month <= 11) return 3; // jesien
+            if (data == null)
+                return 5;
+
+            if (data.Value.Month >= 3 && data.Value.Month <= 5) return 1; // wiosna
+            if (data.Value.Month >= 6 && data.Value.Month <= 8) return 2; // Lato
+            if (data.Value.Month >= 9 && data.Value.Month <= 11) return 3; // jesien
             return 4;// zima
         }
 
