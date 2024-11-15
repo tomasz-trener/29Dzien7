@@ -14,13 +14,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05Intrefejsy", "P05Intrefejsy\P05Intrefejsy.csproj", "{E4001DE0-0FAC-411A-93F8-5143DB1ADCA8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P06Zawodnicy", "P06Zawodnicy", "{EFC08B85-5DB1-4F99-B18A-281BAB94C0B7}"
-	ProjectSection(SolutionItems) = preProject
-		P07ZawodnicyTrenerzy\zadanie.txt = P07ZawodnicyTrenerzy\zadanie.txt
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04Zawodnicy.Shared", "P04Zawodnicy.Shared\P04Zawodnicy.Shared.csproj", "{F4DF1C74-4141-4C64-BB13-1192660E00B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07ZawodnicyTrenerzy", "P07ZawodnicyTrenerzy\P07ZawodnicyTrenerzy.csproj", "{FB884D03-2B6E-4361-9480-937B11B0A40E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E7149472-4D29-4810-AE06-14C7944E0E5C}"
+	ProjectSection(SolutionItems) = preProject
+		podsumowanie.txt = podsumowanie.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

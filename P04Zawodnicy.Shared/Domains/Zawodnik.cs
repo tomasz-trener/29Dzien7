@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace P04Zawodnicy.Shared.Domains
 {
-    public class Zawodnik
+    public class Zawodnik : Osoba
     {
         public static string[] DostepneKolumny = { "Imie", "Nazwisko", "Kraj", "Waga", "Wzrost" };
 
         public static string[] WybraneKolumny { get; set; }
         public int Id_zawodnika { get; set; }
         public int? Id_trenera { get; set; }
-        public string Imie { get; set; }
-        public string Nazwisko { get; set; }
+     
         public string Kraj { get; set; }
-        public DateTime DataUrodzenia { get; set; }
+       
         public int Wzrost { get; set; }
         public int Waga { get; set; }
 

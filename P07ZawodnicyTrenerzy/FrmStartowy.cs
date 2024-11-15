@@ -59,7 +59,9 @@ namespace P03AplikacjaBazodanowaZawodnicy
 
             if(zaznaczonyKraj != null)
             {
-                lbDane.DataSource = mz.PodajZawodnikow(zaznaczonyKraj);
+                var dane = mz.PodajZawodnikow(zaznaczonyKraj);
+                Array.Sort(dane);
+                lbDane.DataSource = dane;
                 lbDane.DisplayMember = "ImieNazwisko";
 
                 double wzrost = mz.PodajSredniWzrost(zaznaczonyKraj);

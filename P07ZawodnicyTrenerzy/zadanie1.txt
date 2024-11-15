@@ -8,3 +8,4 @@
 2. **Sortowanie wyników**:
    - Wyniki wyszukiwania powinny byæ posortowane wed³ug pory roku urodzenia, zaczynaj¹c od wiosny i koñcz¹c na zimie.
    U¿yj do tego celu metody `Array.Sort` oraz interfejsu `IComparable`.
+

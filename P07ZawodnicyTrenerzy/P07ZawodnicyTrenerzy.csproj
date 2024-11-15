@@ -157,7 +157,7 @@
   <ItemGroup>
     <Content Include="skrypt.sql" />
     <Content Include="wyglad.png" />
-    <Content Include="zadanie.txt" />
+    <Content Include="zadanie1.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\P04Zawodnicy.Shared\P04Zawodnicy.Shared.csproj">
